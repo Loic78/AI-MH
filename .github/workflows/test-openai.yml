@@ -70,7 +70,8 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: ${{ secrets.AZURE_APP_SERVICE_NAME }}
+          app-name: 'mh-chatgpt-ai-webapp-5kimjq3yqq37k'
+          slot-name: 'Production'
           package: ${{ github.workspace }}/release.zip
 
       - name: 🧹 Cleanup
